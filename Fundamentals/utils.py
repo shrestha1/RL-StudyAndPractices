@@ -15,6 +15,7 @@ def g2c(coordinate:tuple, pixel_unit:int) -> tuple:
 
 def c2g(coordinate:tuple, pixel_unit:int) -> tuple:
     """
+        cartesian coordinate to pygame coordinate
     
     coordinate: cartesian coordinate (x, y)
     pixel_unit: int
