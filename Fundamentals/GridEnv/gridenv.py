@@ -8,7 +8,7 @@ BLUE = (0, 0, 200)
 RED = (200, 0, 0)
 GREEN = (0,125,0)
 
-class grid_env:
+class GridEnv:
     def __init__(self,window_size:tuple, block_size:int):
         self.WINDOW_WIDTH, self.WINDOW_HEIGHT =  window_size
         self.block_size = block_size
@@ -74,7 +74,7 @@ if __name__ == '__main__':
     walls_coordinate ={(3,0), (1, 2)}
     Goal_coordinate = (3,3)
 
-    env = grid_env((400,400),100)
+    env = GridEnv((400,400),100)
     
     env.set_walls(walls_coordinate)
     env.set_goal(Goal_coordinate)
