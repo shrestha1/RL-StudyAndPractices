@@ -9,8 +9,15 @@ states = states(WINDOW_COORDINATE, BLOCK_SIZE)
 transitions = transitions(states, actions)
 rewards = rewards(states)
 
+# Frozen Lake object
 fl = FrozenLake(states, actions, rewards, transitions, WINDOW_COORDINATE,BLOCK_SIZE)
 fl.set_goal(Goal_coordinate)
 fl.set_walls(walls_coordinate)
-policy = policy(fl)
-fl.run(policy)
+
+
+if __name__ == "__main__":
+    # Generate Policy using value iteration
+    policy = policy(fl)
+
+    # run the env using the policy
+    fl.run(policy)
