@@ -40,7 +40,7 @@ class GridEnv:
         rect = pygame.Rect(self.goal[0]*self.block_size,self.goal[1]*self.block_size, self.block_size, self.block_size)
         pygame.draw.rect(self.SCREEN, GREEN, rect)
 
-    def draw(self):
+    def draw_env(self):
         self.draw_grid()
         self.draw_walls()
         self.draw_goal()
